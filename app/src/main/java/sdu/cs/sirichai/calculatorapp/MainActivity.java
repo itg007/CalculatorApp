@@ -17,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
         final EditText number1EditText = findViewById(R.id.edtNumber1);
         final EditText number2EditText = findViewById(R.id.edtNumber2);
         Button addButton = findViewById(R.id.btAdd);
+        Button addButton2 = findViewById(R.id.btMinus);
+        Button addButton3 = findViewById(R.id.btTimes);
+        Button addButton4 = findViewById(R.id.btDivided);
         final TextView resultTextView = findViewById(R.id.tvResult);
 
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -28,6 +31,34 @@ public class MainActivity extends AppCompatActivity {
                 resultTextView.setText(result + "");
             }
         });
+        addButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num1 = Integer.parseInt(number1EditText.getText().toString());
+                int num2 = Integer.parseInt(number2EditText.getText().toString());
+                int result = num1 - num2;
+                resultTextView.setText(result + "");
+            }
+        });
+        addButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num1 = Integer.parseInt(number1EditText.getText().toString());
+                int num2 = Integer.parseInt(number2EditText.getText().toString());
+                int result = num1 * num2;
+                resultTextView.setText(result + "");
+            }
+        });
+        addButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int num1 = Integer.parseInt(number1EditText.getText().toString());
+                int num2 = Integer.parseInt(number2EditText.getText().toString());
+                int result = num1 / num2;
+                resultTextView.setText(result + "");
+            }
+        });
+
 
     }//end onCreate
 }//end class
